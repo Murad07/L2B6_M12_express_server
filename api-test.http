@@ -1,7 +1,10 @@
-POST http://localhost:5000/
+POST http://localhost:5000/users
 Content-Type: application/json
 
 {
     "name": "John Doe",
-    "age": 30
+    "email": "John@mail.com",
+    "phone": "1234567890",
+    "age": 30,
+    "address": "123 Main St, City, Country"
 }
