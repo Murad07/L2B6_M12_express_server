@@ -40,3 +40,17 @@ Content-Type: application/json
 
 ### Get All Todos
 GET http://localhost:5000/todos
+
+### Get Todo by ID
+GET http://localhost:5000/todos/1
+
+### Update Todo by ID
+PUT http://localhost:5000/todos/1
+Content-Type: application/json
+
+{
+    "completed": true
+}
+
+### Delete Todo by ID
+DELETE http://localhost:5000/todos/1
