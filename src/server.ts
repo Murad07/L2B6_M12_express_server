@@ -55,6 +55,7 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Hello Next Level Developer!')
 })
 
+// User CRUD endpoints go here
 app.post('/users', async (req: Request, res: Response) => {
     const { name, email, phone, age, address } = req.body;
 
@@ -168,6 +169,47 @@ app.delete('/users/:id', async (req: Request, res: Response) => {
         res.status(200).json({
             success: true,
             message: 'User deleted successfully',
+        });
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+})
+
+
+// Todo CRUD endpoints go here
+app.post('/todos', async (req: Request, res: Response) => {
+    const { user_id, title, description, completed, due_date } = req.body;
+
+    try {
+        const result = await pool.query(
+            'INSERT INTO todos (user_id, title, description, completed, due_date) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+            [user_id, title, description, completed, due_date]
+        );
+
+        res.status(201).json({
+            success: true,
+            message: 'Todo created successfully',
+            data: result.rows[0]
+        });
+
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: err.message,
+        });
+    }
+
+})
+
+app.get('/todos', async (req: Request, res: Response) => {
+    try {
+        const result = await pool.query('SELECT * FROM todos');
+        res.status(200).json({
+            success: true,
+            data: result.rows
         });
     } catch (err: any) {
         res.status(500).json({

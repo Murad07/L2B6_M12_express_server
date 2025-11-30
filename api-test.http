@@ -24,4 +24,19 @@ Content-Type: application/json
 }
 
 ### Delete User by ID
-DELETE http://localhost:5000/users/5
+DELETE http://localhost:5000/users/6
+
+### Create Todo
+POST http://localhost:5000/todos
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "title": "Finish Node.js project",
+    "description": "Complete the CRUD operations for users and todos",
+    "completed": false,
+    "due_date": "2024-12-31"
+}
+
+### Get All Todos
+GET http://localhost:5000/todos
