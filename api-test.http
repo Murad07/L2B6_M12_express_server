@@ -2,9 +2,15 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "John@mail.com",
-    "phone": "1234567890",
-    "age": 30,
+    "name": "Murad Hossain",
+    "email": "murad@mail.com",
+    "phone": "1234567100",
+    "age": 36,
     "address": "123 Main St, City, Country"
 }
+
+### Get All Users
+GET http://localhost:5000/users
+
+### Get User by ID
+GET http://localhost:5000/users/2
