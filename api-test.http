@@ -2,8 +2,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Karim Hossain",
-    "email": "karim@mail.com",
+    "name": "Forid Hossain",
+    "email": "farid@mail.com",
     "phone": "1234567100",
     "age": 36,
     "address": "123 Main St, City, Country"
