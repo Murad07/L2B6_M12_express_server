@@ -20,11 +20,11 @@ PUT http://localhost:5000/users/4
 Content-Type: application/json
 
 {
-    "name": "Murad Hossain"
+    "name": "Murad Hossain 22"
 }
 
 ### Delete User by ID
-DELETE http://localhost:5000/users/6
+DELETE http://localhost:5000/users/7
 
 ### Create Todo
 POST http://localhost:5000/todos
