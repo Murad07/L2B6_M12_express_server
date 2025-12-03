@@ -1,9 +1,20 @@
+### Login User
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "afzal@mail.com",
+    "password": "123456"
+}
+
+### Create User
 POST http://localhost:5000/users
 Content-Type: application/json
 
 {
     "name": "Afzal Hossain",
     "email": "afzal@mail.com",
+    "password": "123456",
     "phone": "1200567100",
     "age": 36,
     "address": "123 Main St, City, Country"
