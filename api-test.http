@@ -22,6 +22,7 @@ Content-Type: application/json
 
 ### Get All Users
 GET http://localhost:5000/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWZ6YWwgSG9zc2FpbiIsImVtYWlsIjoiYWZ6YWxAbWFpbC5jb20iLCJpZCI6MSwiaWF0IjoxNzY0NzMyNzgyLCJleHAiOjE3NjQ3MzYzODJ9.BJXPY8FgR-CW7s_J8DhWeDX51-1JDm_3zB9m9aJYSps
 
 ### Get User by ID
 GET http://localhost:5000/users/1
