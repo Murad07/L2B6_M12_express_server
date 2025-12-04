@@ -7,9 +7,9 @@ const router = Router();
 
 router.post('/', userController.createUser)
 
-router.get('/', logger, auth(), userController.getAllUsers)
+router.get('/', logger, auth("admin"), userController.getAllUsers)
 
-router.get('/:id', userController.getUserById)
+router.get('/:id', auth("admin", "user"), userController.getUserById)
 
 router.put('/:id', userController.updateUser)
 

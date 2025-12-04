@@ -12,23 +12,24 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Afzal Hossain",
-    "email": "afzal@mail.com",
+    "name": "Murad Hossain",
+    "role": "admin",
+    "email": "murad@mail.com",
     "password": "123456",
-    "phone": "1200567100",
+    "phone": "1200567102",
     "age": 36,
     "address": "123 Main St, City, Country"
 }
 
 ### Get All Users
 GET http://localhost:5000/users
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWZ6YWwgSG9zc2FpbiIsImVtYWlsIjoiYWZ6YWxAbWFpbC5jb20iLCJpZCI6MSwiaWF0IjoxNzY0NzMyNzgyLCJleHAiOjE3NjQ3MzYzODJ9.BJXPY8FgR-CW7s_J8DhWeDX51-1JDm_3zB9m9aJYSps
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAbWFpbC5jb20iLCJpZCI6MiwiaWF0IjoxNzY0ODIzNzU1LCJleHAiOjE3NjQ4MjczNTV9.4G6IrDYcAHRcJ1FFi675GOLE76il7fgUNqqB3hXY8YY
 
 ### Get User by ID
 GET http://localhost:5000/users/1
 
 ### Update User by ID
-PUT http://localhost:5000/users/4
+PUT http://localhost:5000/users/1
 Content-Type: application/json
 
 {

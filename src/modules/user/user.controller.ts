@@ -65,10 +65,10 @@ const getUserById = async (req: Request, res: Response) => {
 
 const updateUser = async (req: Request, res: Response) => {
     const userId = req.params.id;
-    const { name, email, phone, age, address } = req.body;
+    const { name, role, email, phone, age, address } = req.body;
 
     try {
-        const result = await userService.updateUser(userId as string, name, email, phone, age, address);
+        const result = await userService.updateUser(userId as string, name, role, email, phone, age, address);
 
         if (result.rows.length === 0) {
             return res.status(404).json({
